@@ -1,0 +1,48 @@
+html {
+    background-color: whitesmoke;
+}
+
+#picture_wrapper {
+    margin-top: 50px;
+    justify-content: center;
+}
+
+#picture_wrapper img{
+    margin-top: 30px;
+    background-size: auto;
+    height: auto;
+    width: 540px;
+    border: 3px solid orange;
+}
+
+#data_wrapper h1 {
+    text-align: center;
+}
+
+#data_wrapper {
+    padding-bottom: 20px;
+}
+#content-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.alert {
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f44336;
+    color: white;
+}
+
+.closebtn {
+    color: white;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: black;
+}
