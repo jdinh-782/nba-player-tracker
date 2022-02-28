@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Linking CSS style sheets so we know this is the style we want to apply -->
+        <link rel="stylesheet" href="/static/nav.css">
+        <link rel="stylesheet" href="/static/index.css">
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"> -->
+
+
+        <!-- Changing website icon -->
+        <link rel="icon" href="https://cdn.nba.com/manage/2021/10/GettyImages-1228132003.png">
+
+        <title>NBA Player Tracker - {{ player_name }}</title>
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a class="active" href="/">Home</a>
+            <a href="about.html">About</a>
+            <a href="feedback.html">Feedback</a>
+
+            <!-- work on displaying certain amount or only show datalist when user begins typing -->
+            <label>
+                <form autocomplete="off">
+                    <input list="players" id="userInput" name="search_box" type="text" placeholder="Search...">
+                    <datalist id="players">
+                        <option value=""></option>
+                    </datalist>
+                </form>
+            </label>
+
+        </div>
+
+        <div id="content-wrapper">
+            <div id="picture_wrapper">
+                <img id="player_profile_image" src="{{ image_url }}">
+
+            </div>
+
+            <div id="data_wrapper">
+                {% set playerName = player_name %}
+                {% block content %}
+
+                    {% for message in get_flashed_messages() %}
+                        <div class="alert" id="alert-message">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+
+                    <h1 style="font-family: inherit"> {{playerName}} </h1>
+                        {{data | safe}}
+                {% endblock %}
+            </div>
+        </div>
+
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // let player_name;
+        // document.getElementById('userInput').onkeypress = function(e) {
+        //     if(e.keyCode === 13) {
+        //         // event.preventDefault(); // stops page from reloading
+        //
+        //         player_name = document.getElementById("userInput").value;
+        //         console.log(player_name)
+        //
+        //         // console.log(window.location.host + "/?player=" + String(player_name))
+        //         // window.history.replaceState("", "", "?player=" + String(player_name));
+        //     }
+        // }
+
+        setTimeout(function() {
+            $('#alert-message').fadeOut();
+        }, 5000); // time in milliseconds
+
+        // display player names to datalist (search drop down)
+        let list = {{ player_names | tojson }};
+        let values = '';
+        for (i = 0; i < list.length; i++) {
+            values += '<option value="' + list[i] + '" />';
+        }
+        document.getElementById("players").innerHTML = values;
+
+
+    </script>
+
+</html>
