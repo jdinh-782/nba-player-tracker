@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, flash, redirect
 import players
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'ja203sdknr23nkdlns'  # should be some random long string
+app.config['SECRET_KEY'] = 'YOUR_SECRET_KEY'  # should be some random long string
 
 @app.route('/about.html')
 def about_page():
