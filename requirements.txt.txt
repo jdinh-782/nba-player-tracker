@@ -1,0 +1,6 @@
+###### Requirements without Version Specifiers ######
+requests
+pandas
+nba_api
+nba_api.stats.static
+flask
