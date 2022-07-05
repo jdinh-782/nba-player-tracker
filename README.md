@@ -9,6 +9,9 @@ This program utilizes the [NBA API](https://github.com/swar/nba_api) to receive 
 * Ensure intended browser of use is updated to most recent version. We recommend using either Google Chrome or Mozilla Firefox.
 * Python version is the latest installed.
 * pip version is the latest installed.
+```
+python -m pip install --upgrade pip
+```
 
 ### Installation
 Create a new folder and run the following commands in terminal:
