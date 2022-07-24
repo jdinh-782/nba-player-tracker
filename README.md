@@ -33,7 +33,7 @@ python3 main.py
 ```
 
 ## Help
-Please submit feedback using this [form](https://docs.google.com/forms/d/e/1FAIpQLSfIuycEaVL72vk4nI769YCcoTHdk8jDoh93scR-ie0wnUaPFg/viewform?embedded=true). Otherwise, feel free to reach out to us by [email](jdinh782@gmail.com).
+Please submit feedback using this [form](https://docs.google.com/forms/d/e/1FAIpQLSfIuycEaVL72vk4nI769YCcoTHdk8jDoh93scR-ie0wnUaPFg/viewform?embedded=true). Otherwise, feel free to reach out to us by [email](mailto:dinhjd@uci.edu?subject=[GitHub]%20Source%20Han%20Sans).
 
 ## Authors and Contributors
 [Johnson Dinh](https://www.linkedin.com/in/johnson-dinh/) <br>
